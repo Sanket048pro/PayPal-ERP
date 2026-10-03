@@ -1,0 +1,9 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Sign in · PayPal ERP</title><link rel="stylesheet" href="css/style.css"></head><body>
+<main class="login"><h1>PayPal ERP</h1><p>Sign in. You will see only your department's dashboard and data.</p>
+<form class="card" id="f"><label>Email</label><input id="e" type="email" autocomplete="username" required><label>Password</label><input id="p" type="password" autocomplete="current-password" required><p id="err" style="color:var(--red)" role="alert"></p><button class="btn">Sign in</button> <a class="btn alt" href="index.html">Back to website</a></form>
+<p class="demo">Demo accounts (password <b>Demo@123</b>; click to fill):<br>
+<code>sales@demo.erp</code> <code>accounts@demo.erp</code> <code>eng@demo.erp</code> <code>store@demo.erp</code> <code>dow@demo.erp</code><br>Owner: sanket048pro@gmail.com / ChangeMe#2026 (change after go-live)</p></main>
+<script src="js/api.js"></script><script>
+document.querySelectorAll('code').forEach(c=>c.onclick=()=>{e.value=c.textContent;p.value='Demo@123'});
+f.onsubmit=ev=>{ev.preventDefault();const u=API.login(e.value,p.value);if(!u){err.textContent='Email or password is incorrect.';return}location.href='app.html'};
+</script></body></html>
