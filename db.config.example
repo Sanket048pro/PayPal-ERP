@@ -1,0 +1,7 @@
+# Server-side only. Never put this in a publicly served folder; never commit the real file.
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_NAME=PayPal_ERP
+DB_USER=Sanket048pro
+DB_PASSWORD=<set-locally>
+DB_SSL=REQUIRED
